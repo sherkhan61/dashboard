@@ -50,5 +50,25 @@
       border-radius: 5px;
       align-self: flex-end;
     }
+
+    .person-icon {
+      color: crimson;
+      background-color: rgba(255, 0, 0, 0.2);
+    }
+
+    .shopping-icon {
+      color: goldenrod;
+      background-color: rgba(218, 165, 32, 0.2);
+    }
+
+    .monetization-icon {
+      color: green;
+      background-color: rgba(0, 128, 0, 0.2);
+    }
+
+    .balance-icon {
+      color: purple;
+      background-color: rgba(128, 0, 128, 0.2);
+    }
   }
 }
