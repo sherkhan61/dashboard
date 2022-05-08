@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom"
 import "./Sidebar.scss";
 
 import DashboardIcon from '@mui/icons-material/Dashboard';
@@ -20,7 +21,9 @@ const Sidebar = () => {
     return (
         <div className="sidebar">
             <div className="top">
-                <span className="logo">Dashboard</span>
+                <Link to="/">
+                    <span className="logo">Dashboard</span>
+                </Link>
             </div>
             <hr/>
             <div className="center">
@@ -31,14 +34,18 @@ const Sidebar = () => {
                         <span>Dashboard</span>
                     </li>
                     <p className="title">LISTS</p>
-                    <li>
-                        <PersonOutlineOutlinedIcon className="icon"/>
-                        <span>Users</span>
-                    </li>
-                    <li>
-                        <StoreRoundedIcon className="icon"/>
-                        <span>Products</span>
-                    </li>
+                    <Link to="/users">
+                        <li>
+                            <PersonOutlineOutlinedIcon className="icon"/>
+                            <span>Users</span>
+                        </li>
+                    </Link>
+                    <Link to="/products">
+                        <li>
+                            <StoreRoundedIcon className="icon"/>
+                            <span>Products</span>
+                        </li>
+                    </Link>
                     <li>
                         <PaymentOutlinedIcon className="icon"/>
                         <span>Orders</span>
