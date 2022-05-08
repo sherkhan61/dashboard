@@ -1,8 +1,7 @@
 import React from "react";
 import "./chart.scss";
 
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-
+import {Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis} from 'recharts';
 
 
 const data = [
