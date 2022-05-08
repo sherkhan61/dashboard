@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext} from "react";
 import "./Navbar.scss";
 
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
@@ -8,9 +8,12 @@ import FullscreenOutlinedIcon from '@mui/icons-material/FullscreenOutlined';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
 import ListOutlinedIcon from '@mui/icons-material/ListOutlined';
+import {DarkModeContext} from "../../context/darkModeContext";
 
 
 const Navbar = () => {
+    const {dispatch} = useContext(DarkModeContext);
+
     return (
         <div className="navbar">
             <div className="wrapper">
@@ -24,7 +27,8 @@ const Navbar = () => {
                         English
                     </div>
                     <div className="item">
-                        <DarkModeOutlinedIcon className="icon"/>
+                        <DarkModeOutlinedIcon className="icon"
+                                              onClick={() => dispatch({type: "TOGGLE"})}/>
                     </div>
                     <div className="item">
                         <FullscreenOutlinedIcon className="icon"/>
@@ -41,9 +45,10 @@ const Navbar = () => {
                         <ListOutlinedIcon className="icon"/>
                     </div>
                     <div className="item">
-                        <img src="https://images.pexels.com/photos/11293709/pexels-photo-11293709.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                             alt=""
-                             className="avatar"
+                        <img
+                            src="https://images.pexels.com/photos/11293709/pexels-photo-11293709.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                            alt=""
+                            className="avatar"
                         />
                     </div>
                 </div>
